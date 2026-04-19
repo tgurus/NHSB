@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nhsb-waveform"
+version = "1.3.0"
+description = "Near-Horizon Scrambling Brane: phenomenological waveform model for dissipative horizonless compact objects"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "John Reimer Morales", email = "jrm@globalharmonics.org"},
+]
+keywords = [
+    "gravitational-waves",
+    "exotic-compact-objects",
+    "waveform-model",
+    "membrane-paradigm",
+    "black-hole-alternatives",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.7",
+    "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+pycbc = ["pycbc"]
+lal = ["lalsuite"]
+all = ["pycbc", "lalsuite"]
+
+[project.urls]
+Repository = "https://github.com/globalharmonics/nhsb-waveform"
+Paper = "https://arxiv.org/abs/XXXX.XXXXX"
